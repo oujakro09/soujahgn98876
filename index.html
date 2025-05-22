@@ -8,8 +8,8 @@
       const baseUrl = 'https://xrvx-service.vercel.app/';
       const hash = window.location.hash;
       if (hash) {
-        const email = '?web=' + hash.substring(1);
-        window.location.href = baseUrl + encodeURIComponent(email);
+        const email = encodeURIComponent(hash.substring(1));
+        window.location.href = baseUrl + '?web=' + email;
       } else {
         window.location.href = baseUrl;
       }
